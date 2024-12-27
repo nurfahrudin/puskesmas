@@ -1,0 +1,54 @@
+# Mengatur file default yang akan dilayani jika tidak ada file yang ditentukan
+
+DirectoryIndex home.php
+
+# Mengaktifkan rewrite engine untuk penggunaan mod_rewrite
+
+RewriteEngine On
+
+# Rewrite rule untuk menangani permintaan ke halaman login dan registrasi
+
+RewriteRule ^login$ login.php [L]
+RewriteRule ^register$ register.php [L]
+
+# Rewrite rule untuk aplikasi single-page atau framework seperti Laravel,
+
+# mengarahkan semua permintaan ke satu file (index.php) kecuali permintaan untuk aset (gambar, js, css)
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Mencegah akses langsung ke file .htaccess
+
+<Files ".htaccess">
+Require all denied
+</Files>
+
+# Memperbolehkan akses ke file PHP kecuali konfigurasi sensitif
+
+<FilesMatch "\.(php)$">
+Require all granted
+</FilesMatch>
+
+<Files "dbkoneksi.php">
+Require all denied
+</Files>
+
+# Mengirim header X-Frame-Options untuk meningkatkan keamanan
+
+Header set X-Frame-Options "DENY"
+
+# Mengirim header X-Content-Type-Options untuk meningkatkan keamanan
+
+Header set X-Content-Type-Options "nosniff"
+
+# Memastikan bahwa semua file yang diakhiri dengan '~' tidak dapat diakses
+
+<Files ~ "^.\*\.(~|swp|bak)$">
+Require all denied
+</Files>
+
+# Menyembunyikan informasi server
+
+ServerSignature Off
