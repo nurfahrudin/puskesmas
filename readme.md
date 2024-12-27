@@ -37,5 +37,5 @@ Menu pada dashboard admin meliputi:
 ## Cara Menggunakan
 
 1. Buka aplikasi melalui browser.
-2. Login dengan kredensial yang valid.
+2. Login dengan user-password admin-admin atau user-user.
 3. Navigasikan melalui menu pada dashboard admin untuk mengelola data puskesmas.
