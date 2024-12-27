@@ -8,7 +8,7 @@ Sistem Informasi puskesmas adalah aplikasi berbasis web yang dibangun dengan PHP
 
 - **Home**: Halaman utama yang memberikan informasi umum tentang puskesmas.
 - **Login**: Halaman untuk autentikasi pengguna sebelum mengakses sistem.
-- **Cookies**: Login sistem menggunakan cookies.
+- **Cookie**: Login sistem menggunakan cookie.
 - **Antrian**: Halaman untuk pendaftaran pasien secara online.
 - **Chart**: Halaman dashboard sistem yang menampilkan grafik jumlah antrian.
 - **Konsultasi Whatsapp**: Halaman konsultasi online melalui Whatsapp.

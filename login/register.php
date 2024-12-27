@@ -46,9 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <title>Admin Register</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-
     
 
     <!-- Bootstrap core CSS -->
